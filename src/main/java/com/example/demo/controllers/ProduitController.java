@@ -3,6 +3,7 @@ package com.example.demo.controllers;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -13,6 +14,7 @@ import com.example.demo.entity.Produit;
 import com.example.demo.servicers.IProduit;
 
 @RestController("/")
+@CrossOrigin(origins = "http://localhost:4200")
 public class ProduitController {
 	
 //	@RequestMapping(method=RequestMethod.GET)
@@ -29,7 +31,7 @@ public class ProduitController {
 	public Produit updateProduit(@RequestBody Produit p) {
 		return iProduit.updateProduit(p);
 	}
-	@RequestMapping(method=RequestMethod.GET)
+	@RequestMapping(value="/produits",method=RequestMethod.GET)
 	public List<Produit> allProduits() {
 		return iProduit.allProduits();
 	}

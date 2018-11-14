@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.example.demo.entity.Car;
 import com.example.demo.repository.CarRepository;
 @RestController
+
 public class CoolCarController {
     private CarRepository repository;
 
