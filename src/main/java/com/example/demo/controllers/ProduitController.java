@@ -14,6 +14,7 @@ import com.example.demo.entity.Produit;
 import com.example.demo.servicers.IProduit;
 
 @RestController("/")
+@RequestMapping("/produits")
 @CrossOrigin(origins = "http://localhost:4200")
 public class ProduitController {
 	
@@ -31,7 +32,7 @@ public class ProduitController {
 	public Produit updateProduit(@RequestBody Produit p) {
 		return iProduit.updateProduit(p);
 	}
-	@RequestMapping(value="/produits",method=RequestMethod.GET)
+	@RequestMapping(method=RequestMethod.GET)
 	public List<Produit> allProduits() {
 		return iProduit.allProduits();
 	}

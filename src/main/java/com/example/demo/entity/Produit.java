@@ -17,7 +17,7 @@ public class Produit {
 public Produit() {
 	super();
 }
-public Produit(String lib, float qte, float prix) {
+public Produit(Long idProduit, String lib, float qte, float prix) {
 	super();
 	this.lib = lib;
 	this.qte = qte;
